@@ -47,7 +47,7 @@ selected_model = st.selectbox(
 def load_model(model_path):
 
     return YOLOv8ONNX(
-        model_path="models/best.onnx",
+        model_path="model_path",
         class_names=CLASS_NAMES,
     )
 
