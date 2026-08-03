@@ -25,25 +25,23 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 # ==========================================
 # Model Selection
 # ==========================================
-
-models = sorted(Path(MODEL_DIR).glob("*.pt"))
-
-if not models:
-    st.error("No .pt model found inside models/")
-    st.stop()
-
-selected_model = st.selectbox(
-    "Select Model",
-    [m.name for m in models],
+uploaded_model = st.file_uploader(
+    "Upload YOLO Model (.pt)",
+    type=["pt"]
 )
 
+if uploaded_model is None:
+    st.info("Please upload a YOLO model.")
+    st.stop()
 
-@st.cache_resource
-def load_model(model_path):
-    return YOLO(model_path)
+# Save uploaded model temporarily
+tmp_model = tempfile.NamedTemporaryFile(delete=False, suffix=".pt")
+tmp_model.write(uploaded_model.read())
+tmp_model.close()
 
+# Load model
+model = YOLO(tmp_model.name)
 
-model = load_model(os.path.join(MODEL_DIR, selected_model))
 
 # ==========================================
 # Upload

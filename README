@@ -1,0 +1,32 @@
+# UAV Thermal Object Detection with YOLO
+
+A deep learning-based object detection system for detecting and localizing objects from **UAV thermal imagery** using YOLO models.
+
+The project supports inference on thermal images and videos captured by drones, enabling detection of targets such as:
+
+- Person
+- Car
+- Bicycle
+- OtherVehicle
+- DontCare
+
+The system provides a simple Streamlit interface for uploading YOLO models, images, and videos, then visualizing detection results with bounding boxes.
+
+---
+
+## Features
+
+✅ YOLO `.pt` model support  
+✅ Thermal image object detection  
+✅ Thermal video processing  
+✅ Image and video upload  
+✅ Automatic bounding box visualization  
+✅ Confidence score display  
+✅ Multiple model selection  
+✅ Streamlit web interface  
+✅ GPU acceleration support (CUDA)  
+✅ Export-ready detection pipeline
+
+---
+
+## Project Structure
