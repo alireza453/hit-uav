@@ -45,10 +45,15 @@ cd HIT-UAV
 python -m venv <NAME>
 ```
 
-## 3. Run
+## 3. Install Dependencies 
+```bash
+pip install -r requirements.txt
+```
+
+## 4. Run
 
 ```bash
-streamlit run app.py
+streamlit run app2.py
 ```
 
 - app.py uses onnx model
