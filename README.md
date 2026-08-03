@@ -1,6 +1,6 @@
 # UAV Thermal Object Detection with YOLO
 
-![UAV Thermal Detection Demo](https://github.com/alireza453/hit-uav/blob/master/outputs/60m-40_3.gif)
+![UAV Thermal Detection Demo](https://github.com/alireza453/hit-uav/blob/main/outputs/60m-40_3.gif)
 
 A deep learning-based object detection system for detecting and localizing objects from **UAV thermal imagery** using YOLO models.
 
